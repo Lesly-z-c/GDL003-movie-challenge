@@ -6,6 +6,11 @@ window.api = {
         .then( data => console.log(data) )
     }
     
-         window.api.findMovies('terror',1);
+
 
 };
+
+
+
+
+    window.api.findMovies('sailor moon',1);

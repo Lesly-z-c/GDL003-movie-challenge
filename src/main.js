@@ -14,3 +14,19 @@ let showNameOfActor = () => {
 }
 
 document.getElementById("nameOfActorForSearch").addEventListener("click",showMoviesOfActor);
+
+ let episodes = window.example.computeStats(search);
+const Seasons = document.querySelector(".allseason");
+let output = " ";
+ Seasons.forEach(search =>
+{
+    output += `
+    <div class = "season billboard">
+    <div class = "season card"> 
+    <p>poster: ${search.Poster}</p>
+    <p>title: ${search.Title}</p>
+    <p>year: ${search.Year}</p>
+    `
+})
+
+Seasons.innerHTML = output;
