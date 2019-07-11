@@ -18,5 +18,20 @@ let showCharacters = () => {
     document.getElementById("btnOfCharacters").style.display = "none";
 }
 
+
+
+function print_character(Search) {
+
+    return '<div class="card">' +
+                `<img src="${Search.Poster}">` +
+                '<div class="container">' +
+                    `<h4>Name: ${Search.Title}</h4>` +
+                    `<p>Status: ${Search.Year}</p>` +
+                '</div>' +
+            '</div>';
+    
+}
+
 document.getElementById("btnOfSeasons").addEventListener("click",showPagesOfSeasons);
 document.getElementById("btnOfCharacters").addEventListener("click",showCharacters);
+
