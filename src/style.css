@@ -10,3 +10,11 @@ body,html  {
     background-position: center center;
     background-size: cover;
 }
+
+img{
+width: 400px;
+  height: 400px;
+  margin:auto;
+  display:inline-block;
+  cursor:pointer;
+}
