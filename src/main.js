@@ -1,19 +1,24 @@
-//fetch(http://http://www.omdbapi.com/#parameters)
 document.getElementById("homePage").style.display = "block";
+document.getElementById("btnOfPage1").style.display = "none";
+document.getElementById("btnOfPage2").style.display = "none";
+document.getElementById("btnOfPage3").style.display = "none";
 
-
-let showMoviesOfActor = () => {
-    let actorSelect;
-    actorSelect = document.getElementById("nameOfActor").value;
+let showPagesOfSeasons = () => {
     document.getElementById("homePage").style.display = "none";
-    
-}
-let showNameOfActor = () => {
-    actorSelect = document.getElementById("nameOfActor").value;
-    moviesOfActorPage.innerHTML = actorSelect;
+    document.getElementById("btnOfSeasons").style.display = "none";
+    document.getElementById("btnOfPage1").style.display = "block";
+    document.getElementById("btnOfPage2").style.display = "block";
+    document.getElementById("btnOfPage3").style.display = "block";
+    document.getElementById("btnOfCharacters").style.display = "none";
 }
 
-document.getElementById("nameOfActorForSearch").addEventListener("click",showMoviesOfActor);
+let showCharacters = () => {
+    document.getElementById("homePage").style.display = "none";
+    document.getElementById("btnOfSeasons").style.display = "none";
+    document.getElementById("btnOfCharacters").style.display = "none";
+}
+
+
 
  let episodes = window.example.computeStats(search);
 const Seasons = document.querySelector(".allseason");
@@ -30,3 +35,7 @@ let output = " ";
 })
 
 Seasons.innerHTML = output;
+
+document.getElementById("btnOfSeasons").addEventListener("click",showPagesOfSeasons);
+document.getElementById("btnOfCharacters").addEventListener("click",showCharacters);
+
