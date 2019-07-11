@@ -19,7 +19,6 @@ let showCharacters = () => {
 }
 
 
-
 function print_character(Search) {
 
     return '<div class="card">' +
@@ -29,8 +28,8 @@ function print_character(Search) {
                     `<p>Status: ${Search.Year}</p>` +
                 '</div>' +
             '</div>';
-    
-}
+ 
+ }
 
 document.getElementById("btnOfSeasons").addEventListener("click",showPagesOfSeasons);
 document.getElementById("btnOfCharacters").addEventListener("click",showCharacters);
