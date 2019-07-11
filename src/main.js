@@ -1,23 +1,32 @@
 document.getElementById("homePage").style.display = "block";
 document.getElementById("btnOfPage1").style.display = "none";
 document.getElementById("btnOfPage2").style.display = "none";
-document.getElementById("btnOfPage3").style.display = "none";
+document.getElementById("homeImg").style.display = "none";
+document.getElementById("homePoster").style.display = "none";
+
 
 let showPagesOfSeasons = () => {
     document.getElementById("homePage").style.display = "none";
     document.getElementById("btnOfSeasons").style.display = "none";
     document.getElementById("btnOfPage1").style.display = "block";
     document.getElementById("btnOfPage2").style.display = "block";
-    document.getElementById("btnOfPage3").style.display = "block";
     document.getElementById("btnOfCharacters").style.display = "none";
+    document.getElementById("btnOfPage1").style.display = "none";
+    document.getElementById("homePoster").style.display = "block";
 }
 
 let showCharacters = () => {
     document.getElementById("homePage").style.display = "none";
     document.getElementById("btnOfSeasons").style.display = "none";
     document.getElementById("btnOfCharacters").style.display = "none";
+    document.getElementById("homeImg").style.display = "block";
+
 }
 
+let showNextPage = () => {
+    document.getElementById("btnOfPage1").style.display = "block";
+
+}
 
 function print_character(Search) {
 
@@ -33,4 +42,4 @@ function print_character(Search) {
 
 document.getElementById("btnOfSeasons").addEventListener("click",showPagesOfSeasons);
 document.getElementById("btnOfCharacters").addEventListener("click",showCharacters);
-
+document.getElementById("btnOfPage2").addEventListener("click",showNextPage);
