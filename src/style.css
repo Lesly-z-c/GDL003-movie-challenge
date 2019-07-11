@@ -10,3 +10,21 @@ body,html  {
     background-position: center center;
     background-size: cover;
 }
+
+.btnRole {
+    position: center;
+    padding: 12px 12px;
+    line-height: 50px;
+    width: 435px;
+    height: 310px;
+    color: rgb(10, 10, 10);
+    background-size: cover;
+    /* <-- escalar la imagen para cubrir el boton */
+    background-position: center center;
+    /* <-- centrar la imagen en el boton */
+    font-family: Beaufort for LOL,serif;
+  font-size: 450%;
+  color: #937341;
+  border: 1.5px solid  black;
+  }
+
