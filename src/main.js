@@ -19,22 +19,18 @@ let showCharacters = () => {
 }
 
 
+function print_character(Search) {
 
- let episodes = window.example.computeStats(search);
-const Seasons = document.querySelector(".allseason");
-let output = " ";
- Seasons.forEach(search =>
-{
-    output += `
-    <div class = "season billboard">
-    <div class = "season card"> 
-    <p>poster: ${search.Poster}</p>
-    <p>title: ${search.Title}</p>
-    <p>year: ${search.Year}</p>
-    `
-})
+    return '<div class="card">' +
+                `<img src="${Search.Poster}">` +
+                '<div class="container">' +
+                    `<h4>Name: ${Search.Title}</h4>` +
+                    `<p>Status: ${Search.Year}</p>` +
+                '</div>' +
+            '</div>';
+ 
+ }
 
-Seasons.innerHTML = output;
 
 document.getElementById("btnOfSeasons").addEventListener("click",showPagesOfSeasons);
 document.getElementById("btnOfCharacters").addEventListener("click",showCharacters);
