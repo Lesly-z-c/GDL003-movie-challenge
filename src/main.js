@@ -1,45 +1,43 @@
-document.getElementById("homePage").style.display = "block";
-document.getElementById("btnOfPage1").style.display = "none";
-document.getElementById("btnOfPage2").style.display = "none";
-document.getElementById("homeImg").style.display = "none";
-document.getElementById("homePoster").style.display = "none";
 
+let boton_busqueda = document.getElementById('Busqueda');
+let boton_previous = document.getElementById('boton_prev');
+let boton_next = document.getElementById('boton_next');
+let resultado = document.getElementById('resultado');
+let texto = document.getElementById('buscar-texto');
+let current_page = 1;
 
-let showPagesOfSeasons = () => {
-    document.getElementById("homePage").style.display = "none";
-    document.getElementById("btnOfSeasons").style.display = "none";
-    document.getElementById("btnOfPage1").style.display = "block";
-    document.getElementById("btnOfPage2").style.display = "block";
-    document.getElementById("btnOfCharacters").style.display = "none";
-    document.getElementById("btnOfPage1").style.display = "none";
-    document.getElementById("homePoster").style.display = "block";
-}
+boton_busqueda.addEventListener('click',()=> {
+    let busqueda = texto.value;
+    //promesa que regresa el fetch
+    window.api.findMovies(busqueda, current_page).then( movies => {
+        movies.forEach(movie => {
+          let card = print_movie(movie);
+          resultado.innerHTML += card;
+        });
+    });
+});
 
-let showCharacters = () => {
-    document.getElementById("homePage").style.display = "none";
-    document.getElementById("btnOfSeasons").style.display = "none";
-    document.getElementById("btnOfCharacters").style.display = "none";
-    document.getElementById("homeImg").style.display = "block";
+boton_previous.addEventListener('click',()=> {
+    let busqueda = texto.value;
+    //promesa que regresa el fetch
+    current_page = current_page -1;
+    window.api.findMovies(busqueda, current_page).then( movies => {
+        movies.forEach(movie => {
+          let card = print_movie(movie);
+          resultado.innerHTML += card;
+        });
+    });
+});
 
-}
+boton_next.addEventListener('click',()=> {
+    let busqueda = texto.value;
+    //promesa que regresa el fetch
+    current_page = current_page +1;
+    window.api.findMovies(busqueda, current_page).then( movies => {
+        movies.forEach(movie => {
+          let card = print_movie(movie);
+          resultado.innerHTML += card;
+        });
+    });
+});
 
-let showNextPage = () => {
-    document.getElementById("btnOfPage1").style.display = "block";
-
-}
-
-function print_character(Search) {
-
-    return '<div class="card">' +
-                `<img src="${Search.Poster}">` +
-                '<div class="container">' +
-                    `<h4>Name: ${Search.Title}</h4>` +
-                    `<p>Status: ${Search.Year}</p>` +
-                '</div>' +
-            '</div>';
- 
- }
-
-document.getElementById("btnOfSeasons").addEventListener("click",showPagesOfSeasons);
-document.getElementById("btnOfCharacters").addEventListener("click",showCharacters);
-document.getElementById("btnOfPage2").addEventListener("click",showNextPage);
