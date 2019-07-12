@@ -1,3 +1,4 @@
+
 let boton_busqueda = document.getElementById('Busqueda');
 let boton_previous = document.getElementById('boton_prev');
 let boton_next = document.getElementById('boton_next');
@@ -39,3 +40,4 @@ boton_next.addEventListener('click',()=> {
         });
     });
 });
+

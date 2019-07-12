@@ -2,62 +2,55 @@
 
 ## Índice
 
-- [Preámbulo](#preámbulo)
-- [Resumen del proyecto](#resumen-del-proyecto)
-- [Consideraciones generales](#consideraciones-generales)
-- [Objetivos de aprendizaje](#objetivos-de-aprendizaje)
-- [Avances necesarios](#avances-necesarios)
-- [Consideraciones técnicas](#consideraciones-técnicas)
+- [Descripción](#descripción-de-la-web-Gigil)
+- [Historias de usuario](#historias-de-usuario)
+- [Prototipos](#prototipos)
+- [Herramientas utilizadas](#herramientas-utilizadas)
+
+---
+## Descripción de la web Gigil
+
+Esta es una página web que permitirá **visualizar** datos sobre películas románticas.
+Servirá de entretenimiento para todos aquellos usuarios que deseen ver películas de amor.
+---
+
+### Usuario objetivo
+
+Personas que disfruten del género romántico de 18 años en adelante. Es necesario que cuente con bases en el idioma inglés para navegar por la interfaz.
 
 ---
 
-## Preámbulo
+### Necesidades del usuario
 
-Con la aparición de plataformas para ver películas en la nube, como Netflix,
-Amazon Prime Video o HBO, ver películas desde donde estés, comiendo lo que quieras
-(sin tener que pagar precios ridículos por palomitas), parando si es necesario, teniendo acceso a una cantidad
-abrumadora de películas, etc. ha cambiado la experiencia del usuario
-y modificado el mercado de las películas a nivel global.
+- Ver películas de género romántico junto con información relevante de ésta. 
+- Interfaz amigable, vistosa e interactiva.
 
-![Pelis](https://i.giphy.com/media/3o6Ztl7RvfwCp9mqhW/source.gif)
+---
 
-## Resumen del proyecto
+## Historias de usuario
 
-Durante estos días crearás el producto que quieras alrededor del mundo
-de las películas. Puede ser un sitio que hable de las mejores películas
-latinoamericanas, uno que recomiende las películas recién estrenadas en algún servicio de streaming, uno de recomendaciones de películas de terror,
-comedia ... o... ¡lo que quieran!
+Se redactaron tres historias de usuario:
 
-## Consideraciones generales
+1. Usuario debe visualizar el posters de las películas románticas:
+Yo como usuario deseo visualizar los posters de las películas. 
+    - DOD (Definition of done)
+        - Crear la página principal donde visualice los posters de las películas.
+        - Crear un botón donde pueda visualizar la siguiente sección.
+        - Crear un botón donde pueda visualizar la sección anterior.
+        - Crear la sección donde se mostrarán las tarjetas de cada poster.
+2. Usuario debe poder buscar las películas por título en un input. 
+    - DOD
+        - Crear la sección de buscar mediante un input y un botón de search. 
 
-- Este proyecto se debe resolver en equipos.
-- Usa la API de [OMDB](http://www.omdbapi.com/) (The Open Movie Database).
-- Tiempo para completar el reto: 3 días.
-- Habrán dos presentaciones, una a la mitad de la _reto_ y otra al final.
+---
 
-## Objetivos de aprendizaje
+## Prototipos
 
-- Enfrentarte a un reto de corta duración en el que pongas
-  en práctica todo lo aprendido hasta ahora.
-  
-- Que sigas desarrollando tus habilidades de trabajo en equipo. Mientras más
-  personas en un equipo de trabajo, mayor complejidad para: tener un
-  entendimiento común, seguir el flujo de trabajo, buscar consensos, etc.
+---
 
-## Avances necesarios
+## Herramientas utilizadas
 
-- Todo el planeamiento del trabajo deberá ser detallado en un repositorio único
-  por _squad_ en el que se presente el _planning_, el _research_, los _sketches_
-  y las inspiraciones utilizadas para definir el producto.
-- Además, deberás detallar en el archivo _readme_, qué hizo cada integrante del
-  proyecto.
-- El producto deberá presentarse publicado en github pages.
+- [Git](https://git-scm.com/)
+- [GitHub](https://github.com/) 
 
-## Consideraciones técnicas
-
-- El diseño visual de los componentes es de libre elección.
-- Pueden usar algún framework de css si así lo deciden.
-
-## Sobre las presentaciones
-
-- Cada squad tendrá 3 minutos para presentar y 2 minutos para recibir preguntas.
+---
