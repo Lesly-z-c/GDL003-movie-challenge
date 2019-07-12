@@ -3,23 +3,26 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
-        <title>ANIME WORLD</title>
+        <title>Gigil</title>
         <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
-        <section id= homePage> 
-            <h1> Gigil </h1>  
-            <p></p>
+        <section id= "homePage"> 
+            <h1> Gigil  <img id=img_home src= images/heart.gif></h1>
         </section>
-        <input type="text" placeholder="Buscar" id="buscar-texto">
-        <button id="Busqueda" class="boton">Busqueda</button>
-        <input type= button class ="btnSM" id="boton_prev" value="Previous"></input>
-        <input type= button class="btnSM" id="boton_next" value="Next"></input>
-        <div class=""  id="resultado">
-        </div> 
+        <p class="textInHome">Find your love movie!</p>
+        <section id= "sectionOfSearch">
+            <input type="text" placeholder="Search" id="search_text">
+            <button id="search_button" class="button_home">Search</button>
+        </section>
+        <section  id="result">
+        </section> 
+        <section id= "sectionOfLastButtons">
+        <input type= button class ="button_home" id="button_prev" value="Previous"></input>
+        <input type= button class="button_home" id="button_next" value="Next"></input>
+        </section>
 
         <script src="api.js"> </script>
-
         <script src="main.js"> </script>
 
     </body>

@@ -1,43 +1,65 @@
 
-let boton_busqueda = document.getElementById('Busqueda');
-let boton_previous = document.getElementById('boton_prev');
-let boton_next = document.getElementById('boton_next');
-let resultado = document.getElementById('resultado');
-let texto = document.getElementById('buscar-texto');
+let button_search = document.getElementById('search_button');
+let button_previous = document.getElementById('button_prev');
+let button_next = document.getElementById('button_next');
+let result = document.getElementById('result');
+let text = document.getElementById('search_text');
 let current_page = 1;
 
-boton_busqueda.addEventListener('click',()=> {
-    let busqueda = texto.value;
+document.addEventListener('DOMContentLoaded',()=> {
+
+  let search = "amor";
+  //promesa que regresa el fetch
+  window.api.findMovies(search, current_page).then( movies => {
+    result.innerHTML = "";
+    movies.forEach(movie => {
+      let card = print_movie(movie);
+      result.innerHTML += card;
+    });
+  });
+});
+
+
+button_search.addEventListener('click',()=> {
+    let search = text.value;
     //promesa que regresa el fetch
-    window.api.findMovies(busqueda, current_page).then( movies => {
+    current_page = 1;
+    window.api.findMovies(search, current_page).then( movies => {
+      result.innerHTML = "";
         movies.forEach(movie => {
           let card = print_movie(movie);
-          resultado.innerHTML += card;
+          result.innerHTML += card;
         });
     });
 });
 
-boton_previous.addEventListener('click',()=> {
-    let busqueda = texto.value;
+button_previous.addEventListener('click',()=> {
+    let search = text.value;
     //promesa que regresa el fetch
     current_page = current_page -1;
-    window.api.findMovies(busqueda, current_page).then( movies => {
+    window.api.findMovies(search, current_page).then( movies => {
+      result.innerHTML = "";
         movies.forEach(movie => {
           let card = print_movie(movie);
-          resultado.innerHTML += card;
+          result.innerHTML += card;
         });
     });
 });
 
-boton_next.addEventListener('click',()=> {
-    let busqueda = texto.value;
+button_next.addEventListener('click',()=> {
+  scroll_top();
+    let search = text.value;
     //promesa que regresa el fetch
     current_page = current_page +1;
-    window.api.findMovies(busqueda, current_page).then( movies => {
-        movies.forEach(movie => {
+    window.api.findMovies(search, current_page).then( movies => {
+      result.innerHTML = "";
+      movies.forEach(movie => {
           let card = print_movie(movie);
-          resultado.innerHTML += card;
+          result.innerHTML += card;
         });
     });
 });
 
+scroll_top = () => {
+  document.body.scrollTop = document.documentElement.scrollTop = 0;
+}
