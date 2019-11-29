@@ -3,27 +3,26 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
-        <title>Movies Challenge</title>
-        <link rel="stylesheet" href="style.css" />
+        <title>Gigil</title>
+        <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
-        <section id= homePage> 
-            <h1> SailorMoon </h1>  
-            <p>This website is created to all SAILOR MOON fans</p>
+        <section id= "homePage"> 
+            <h1> Gigil  <img id=img_home src= images/heart.gif></h1>
+        </section>
+        <p class="textInHome">Find your love movie!</p>
+        <section id= "sectionOfSearch">
+            <input type="text" placeholder="Search" id="search_text">
+            <button id="search_button" class="button_home">Search</button>
+        </section>
+        <section  id="result">
+        </section> 
+        <section id= "sectionOfLastButtons">
+        <input type= button class ="button_home" id="button_prev" value="Previous"></input>
+        <input type= button class="button_home" id="button_next" value="Next"></input>
         </section>
 
-        <div class="allseason"></div>
-        
-        <button type="button" class="btnRole" value="Assassin"
-        style="background-image: url(https://www.somosxbox.com/wp-content/uploads/2019/04/y2konya_AssassinsCreedUnity_20170911_14-16-23.jpg)"></button>
-    
-        <input type= button class=btnSM id=btnOfSeasons value="Seasons"></input>
-        <input type= button class=btnSM id=btnOfPage1 value="Page 1"></input>
-        <input type= button class=btnSM id=btnOfPage2 value="Page 2"></input>
-        <input type= button class=btnSM id=btnOfPage3 value="Page 3"></input>
-        <input type= button class=btnSM id=btnOfCharacters value="Characters"></input>
         <script src="api.js"> </script>
-
         <script src="main.js"> </script>
 
     </body>

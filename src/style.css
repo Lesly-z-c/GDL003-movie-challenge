@@ -1,30 +1,95 @@
+
+ @import url('https://fonts.googleapis.com/css?family=Quattrocento&display=swap');
+  
+  
 body,html  {
-    margin: auto;
+    color: #FFFFFF;
+    text-align:center;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0;
     width: 100%;
     height: 100%;
-    position: relative;
-    font-family:'Ubuntu', sans-serif;
-    background-color: blanchedalmond ;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT61_xQaZT8jnOxRcT8Q5CWp41cwJtcJUJzkZDEdcugqFmXRO6p);
     background-attachment: fixed;
-    background-position: center center;
     background-size: cover;
+    font-family: 'Quattrocento', cursive;
+    
 }
 
-.btnRole {
-    position: center;
-    padding: 12px 12px;
-    line-height: 50px;
-    width: 435px;
-    height: 310px;
-    color: rgb(10, 10, 10);
-    background-size: cover;
-    /* <-- escalar la imagen para cubrir el boton */
-    background-position: center center;
-    /* <-- centrar la imagen en el boton */
-    font-family: Beaufort for LOL,serif;
-  font-size: 450%;
-  color: #937341;
-  border: 1.5px solid  black;
-  }
+h1{
+    font-size: 1.5em;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
 
+#homePage {
+    font-size:500%;
+    margin: auto;
+}
+
+.textInHome {
+    font-family: 'Quattrocento', cursive;
+    font-size:200%
+}
+
+.button_home{
+    -moz-box-shadow: 9px 6px 9px -6px #f2bdb5;
+    -webkit-box-shadow: 9px 6px 9px -6px #f2bdb5;
+    box-shadow: 9px 6px 9px -6px #f2bdb5;
+    background-color:#b7cbbf;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+    border:2px solid #f5dabd;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Quattrocento;
+    font-size:18px;
+    padding:4px 15px;
+    text-decoration:none;
+    text-shadow:0px 1px 4px #4b4c4d;
+}
+.button_home:hover {
+    background-color:#f5ece9;
+}
+.button_home:active {
+    position:relative;
+    top:1px;
+}
+
+#img_home {
+    width: 10%;
+    height: 10%;
+}
+
+#sectionOfSearch {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.card {
+    height: 600px;
+    text-align: center;
+    display: inline-block;
+    background: rgba(#FFFFFF);
+    padding: 10px;
+    margin: 0px 45px 0px 45px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-size: 1em;
+}
+
+.card>img {
+    height: 400px;
+    width: 300px;
+}
+
+#sectionOfLastButtons{
+    width: 100%;
+    height: 100%;
+}
